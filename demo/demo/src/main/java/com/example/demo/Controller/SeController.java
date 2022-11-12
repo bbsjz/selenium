@@ -1,4 +1,4 @@
-package Controller;
+package com.example.demo.Controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 @RestController
+@RequestMapping("/selenium")
 public class SeController {
     String url=ClassLoader.getSystemResource("")+"File";
 
@@ -24,9 +25,4 @@ public class SeController {
         return bytes;
     }
 
-    @GetMapping("")
-    public String hello()
-    {
-        return "hello";
-    }
 }
